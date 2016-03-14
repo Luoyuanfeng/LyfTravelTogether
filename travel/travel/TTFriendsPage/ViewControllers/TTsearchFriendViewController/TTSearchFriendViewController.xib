@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TTSearchFriendViewController">
+            <connections>
+                <outlet property="resultTableView" destination="WO3-eD-p62" id="r0O-1E-lzl"/>
+                <outlet property="searchBtn" destination="cWr-qJ-oFI" id="xkk-Da-Zw4"/>
+                <outlet property="userNameField" destination="QKl-mm-Cby" id="t0N-TK-bJC"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yx0-Da-cMc">
+                    <rect key="frame" x="0.0" y="64" width="414" height="50"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入要查找的用户名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QKl-mm-Cby">
+                            <rect key="frame" x="20" y="10" width="309" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="big-JY-d3C"/>
+                            </connections>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWr-qJ-oFI">
+                            <rect key="frame" x="344" y="10" width="50" height="30"/>
+                            <color key="backgroundColor" red="0.1098481509" green="0.70226775070000003" blue="0.78312947769999997" alpha="0.55344827590000001" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="MjS-Zp-9bh"/>
+                                <constraint firstAttribute="width" constant="50" id="ZjC-ZL-OeF"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="dHk-fh-RWS"/>
+                                <constraint firstAttribute="height" constant="30" id="re2-62-TTm"/>
+                            </constraints>
+                            <state key="normal" title="搜索">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="self.layer.masksToBounds" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="self.layer.CornerRadius">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="MjS-Zp-9bh"/>
+                                    <exclude reference="dHk-fh-RWS"/>
+                                </mask>
+                            </variation>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.95450909941025641" green="0.95450909941025641" blue="0.95450909941025641" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="cWr-qJ-oFI" firstAttribute="top" secondItem="Yx0-Da-cMc" secondAttribute="top" constant="10" id="Bbk-tP-FZa"/>
+                        <constraint firstItem="QKl-mm-Cby" firstAttribute="height" secondItem="cWr-qJ-oFI" secondAttribute="height" id="GYC-lA-l8s"/>
+                        <constraint firstAttribute="height" constant="50" id="N2c-zm-Wih"/>
+                        <constraint firstItem="QKl-mm-Cby" firstAttribute="top" secondItem="cWr-qJ-oFI" secondAttribute="top" id="Nwb-Qa-ipx"/>
+                        <constraint firstItem="QKl-mm-Cby" firstAttribute="leading" secondItem="Yx0-Da-cMc" secondAttribute="leading" constant="20" id="TIo-zC-H0Y"/>
+                        <constraint firstAttribute="trailing" secondItem="cWr-qJ-oFI" secondAttribute="trailing" constant="20" id="UXk-M5-co8"/>
+                        <constraint firstItem="cWr-qJ-oFI" firstAttribute="leading" secondItem="QKl-mm-Cby" secondAttribute="trailing" constant="15" id="dad-r9-kpU"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WO3-eD-p62">
+                    <rect key="frame" x="0.0" y="114" width="414" height="622"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="QQg-Zu-TEz"/>
+                        <outlet property="delegate" destination="-1" id="Ooc-gs-dll"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="WO3-eD-p62" firstAttribute="top" secondItem="Yx0-Da-cMc" secondAttribute="bottom" id="CvR-x9-WM9"/>
+                <constraint firstItem="WO3-eD-p62" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="UnS-BX-TKW"/>
+                <constraint firstItem="Yx0-Da-cMc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="VO4-8j-vNw"/>
+                <constraint firstAttribute="bottom" secondItem="WO3-eD-p62" secondAttribute="bottom" id="X0N-Bk-KaL"/>
+                <constraint firstAttribute="trailing" secondItem="WO3-eD-p62" secondAttribute="trailing" id="e2A-xh-yK3"/>
+                <constraint firstAttribute="trailing" secondItem="Yx0-Da-cMc" secondAttribute="trailing" id="pgm-Fe-qWU"/>
+                <constraint firstItem="Yx0-Da-cMc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="yRO-c1-Xf3"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+        </view>
+    </objects>
+</document>

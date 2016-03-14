@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TTHomeViewController">
+            <connections>
+                <outlet property="collectionView" destination="qUS-Nb-0xR" id="9wf-pL-ju9"/>
+                <outlet property="headView" destination="ZTJ-WG-34V" id="IEK-3E-0MF"/>
+                <outlet property="loopPicContentView" destination="tgV-Wj-Xvd" id="3zm-B1-D2j"/>
+                <outlet property="loopPicScrollView" destination="VKA-T3-VGW" id="RUK-qd-vbE"/>
+                <outlet property="pageControl" destination="n9P-Ci-ow1" id="IX0-f6-pD3"/>
+                <outlet property="sb" destination="RAz-w3-Ma0" id="Suy-MQ-dVs"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" userLabel="bg_view">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="qUS-Nb-0xR">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="C0G-MP-ZoY">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="50" height="50"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Hk0-hu-mF4"/>
+                        <outlet property="delegate" destination="-1" id="ril-Rg-WPz"/>
+                    </connections>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZTJ-WG-34V" userLabel="headView">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="245.5"/>
+                    <subviews>
+                        <searchBar contentMode="redraw" placeholder="搜索目的地" translatesAutoresizingMaskIntoConstraints="NO" id="RAz-w3-Ma0">
+                            <rect key="frame" x="0.0" y="205" width="414" height="40"/>
+                            <color key="barTintColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="u8k-Kh-bW8"/>
+                            </connections>
+                        </searchBar>
+                        <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="n9P-Ci-ow1">
+                            <rect key="frame" x="195" y="168" width="23" height="37"/>
+                            <color key="pageIndicatorTintColor" red="0.69969951919999995" green="0.69969951919999995" blue="0.69969951919999995" alpha="0.28189655172413791" colorSpace="calibratedRGB"/>
+                            <color key="currentPageIndicatorTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </pageControl>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VKA-T3-VGW" userLabel="loopPicScrollView">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="205.5"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tgV-Wj-Xvd" userLabel="contentView">
+                                    <rect key="frame" x="0.0" y="0.0" width="828" height="205.5"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="tgV-Wj-Xvd" firstAttribute="centerY" secondItem="VKA-T3-VGW" secondAttribute="centerY" id="OTi-o1-geV"/>
+                                <constraint firstItem="tgV-Wj-Xvd" firstAttribute="width" secondItem="VKA-T3-VGW" secondAttribute="width" multiplier="2" id="POJ-5z-lC3"/>
+                                <constraint firstAttribute="trailing" secondItem="tgV-Wj-Xvd" secondAttribute="trailing" id="Wde-oe-lwW"/>
+                                <constraint firstAttribute="bottom" secondItem="tgV-Wj-Xvd" secondAttribute="bottom" id="YTG-kE-geU"/>
+                                <constraint firstItem="tgV-Wj-Xvd" firstAttribute="top" secondItem="VKA-T3-VGW" secondAttribute="top" id="ZTY-vS-Zmf"/>
+                                <constraint firstItem="tgV-Wj-Xvd" firstAttribute="leading" secondItem="VKA-T3-VGW" secondAttribute="leading" id="cPj-tK-NUF"/>
+                            </constraints>
+                        </scrollView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="n9P-Ci-ow1" firstAttribute="centerX" secondItem="ZTJ-WG-34V" secondAttribute="centerX" id="BTh-ko-Pvu"/>
+                        <constraint firstItem="VKA-T3-VGW" firstAttribute="leading" secondItem="ZTJ-WG-34V" secondAttribute="leading" id="G1c-b3-ixI"/>
+                        <constraint firstItem="RAz-w3-Ma0" firstAttribute="leading" secondItem="ZTJ-WG-34V" secondAttribute="leading" id="HfK-W0-4tB"/>
+                        <constraint firstAttribute="bottom" secondItem="RAz-w3-Ma0" secondAttribute="bottom" id="VnS-MW-YH7"/>
+                        <constraint firstItem="VKA-T3-VGW" firstAttribute="height" secondItem="ZTJ-WG-34V" secondAttribute="height" constant="-40" id="eLo-Gu-zK4"/>
+                        <constraint firstAttribute="trailing" secondItem="VKA-T3-VGW" secondAttribute="trailing" id="eUl-0n-yVY"/>
+                        <constraint firstItem="VKA-T3-VGW" firstAttribute="top" secondItem="ZTJ-WG-34V" secondAttribute="top" id="inS-c3-zum"/>
+                        <constraint firstAttribute="trailing" secondItem="RAz-w3-Ma0" secondAttribute="trailing" id="nfD-Wi-sir"/>
+                        <constraint firstItem="RAz-w3-Ma0" firstAttribute="top" secondItem="n9P-Ci-ow1" secondAttribute="bottom" id="p1J-sR-JQZ"/>
+                        <constraint firstItem="RAz-w3-Ma0" firstAttribute="top" secondItem="VKA-T3-VGW" secondAttribute="bottom" id="pAr-kR-Q4R"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="qUS-Nb-0xR" secondAttribute="bottom" id="50i-Mq-28s"/>
+                <constraint firstItem="ZTJ-WG-34V" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="7x1-8f-q21"/>
+                <constraint firstItem="qUS-Nb-0xR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Etu-E4-PSW"/>
+                <constraint firstItem="ZTJ-WG-34V" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="1/3" id="Xy7-cu-dqA"/>
+                <constraint firstItem="ZTJ-WG-34V" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lHf-y5-otA"/>
+                <constraint firstAttribute="trailing" secondItem="ZTJ-WG-34V" secondAttribute="trailing" id="tUk-wk-f6s"/>
+                <constraint firstAttribute="trailing" secondItem="qUS-Nb-0xR" secondAttribute="trailing" id="vJG-ET-0yR"/>
+                <constraint firstItem="qUS-Nb-0xR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="yRn-wn-sFQ"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+        </view>
+    </objects>
+</document>

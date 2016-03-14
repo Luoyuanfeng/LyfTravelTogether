@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="tactic_detail_cell" rowHeight="235" id="KGk-i7-Jjw" customClass="TTTacticDetailCell">
+            <rect key="frame" x="0.0" y="0.0" width="403" height="235"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="403" height="234.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dC9-lk-IkA">
+                        <rect key="frame" x="10" y="10" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="Y4g-xm-Vw3"/>
+                            <constraint firstAttribute="width" constant="25" id="qVB-vP-gfX"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iNI-bK-tiJ">
+                        <rect key="frame" x="373" y="12" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="2eK-hh-Qq8"/>
+                            <constraint firstAttribute="height" constant="20" id="vMI-hO-YT5"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="button_list_wish"/>
+                        <state key="highlighted" backgroundImage="button_list_wished"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登上日剧中的东京塔" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lC0-I5-JE2">
+                        <rect key="frame" x="45" y="14" width="318" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7jU-rP-XVr" userLabel="bottomLine">
+                        <rect key="frame" x="15" y="233.5" width="373" height="1"/>
+                        <color key="backgroundColor" red="0.92139423080000005" green="0.92139423080000005" blue="0.92139423080000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="nmg-MJ-ue2"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="lC0-I5-JE2" firstAttribute="leading" secondItem="dC9-lk-IkA" secondAttribute="trailing" constant="10" id="0Kg-N8-eKF"/>
+                    <constraint firstItem="dC9-lk-IkA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="AIr-rL-kCV"/>
+                    <constraint firstItem="dC9-lk-IkA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Cp1-5y-Wvy"/>
+                    <constraint firstAttribute="trailing" secondItem="iNI-bK-tiJ" secondAttribute="trailing" constant="10" id="ML3-if-dM2"/>
+                    <constraint firstAttribute="bottom" secondItem="7jU-rP-XVr" secondAttribute="bottom" id="Nud-AH-iFM"/>
+                    <constraint firstItem="lC0-I5-JE2" firstAttribute="centerY" secondItem="dC9-lk-IkA" secondAttribute="centerY" id="Qto-Kp-o6V"/>
+                    <constraint firstItem="iNI-bK-tiJ" firstAttribute="centerY" secondItem="dC9-lk-IkA" secondAttribute="centerY" id="TnC-Yx-NTN"/>
+                    <constraint firstItem="7jU-rP-XVr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="uOI-Oy-FNg"/>
+                    <constraint firstItem="iNI-bK-tiJ" firstAttribute="leading" secondItem="lC0-I5-JE2" secondAttribute="trailing" constant="10" id="w7q-Cu-7XS"/>
+                    <constraint firstAttribute="trailing" secondItem="7jU-rP-XVr" secondAttribute="trailing" constant="15" id="yKq-rW-YhZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bottomLine" destination="7jU-rP-XVr" id="l2F-qI-txa"/>
+                <outlet property="iconImage" destination="dC9-lk-IkA" id="cVT-4L-t2I"/>
+                <outlet property="topicLabel" destination="lC0-I5-JE2" id="Glc-qE-VXP"/>
+            </connections>
+            <point key="canvasLocation" x="171.5" y="309.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="button_list_wish" width="16" height="16"/>
+        <image name="button_list_wished" width="16" height="16"/>
+    </resources>
+</document>
